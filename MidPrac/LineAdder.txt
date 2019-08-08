@@ -1,0 +1,40 @@
+1: #include <bits/stdc++.h>
+2: using namespace std;
+3: 
+4: int main (){
+5: 
+6:     FILE *p1,*p2;
+7:     char c;
+8:     p1=fopen("headerInput.txt","r");
+9:     p2=fopen("headerOutput.txt","w");
+10:     if(!p1)
+11:         cout<<"File can't be opened";
+12:     else{
+13:         while( (c=fgetc(p1))!=EOF ) {
+14:             if(c=='#'){
+15:                 while( (c=fgetc(p1))!='<' ){
+16:                     ;
+17:                 }
+18:                 while( (c=fgetc(p1))!='>' ){
+19:                     fputc(c,p2);
+20:                 }
+21:                 fputc('\n',p2);
+22: 
+23:             }
+24:         }
+25:     }
+26:     fclose(p1);
+27:     fclose(p2);
+28:     p2=fopen("headerOutput.txt","r");
+29:     cout<<"Header File Names\n";
+30:     if(!p2)
+31:         cout<<"File can't be opened";
+32:     else{
+33:         while( (c=fgetc(p2))!=EOF ){
+34:             cout<<c;
+35:         }
+36:     }
+37:     fclose(p2);
+38:     return 0;
+39: }
+40: 
