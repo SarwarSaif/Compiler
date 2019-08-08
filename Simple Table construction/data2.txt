@@ -1,0 +1,1 @@
+float$x1$=$3.125;$$double$$f1$function$int$x${$double$z;$$$$z$=$0.01+x*5.5;$return$z;$}$int$main$function$void${$int$n1;$$double$z;$$$n1=25;$$z=f1$function$n1;$
